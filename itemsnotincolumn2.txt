@@ -1,0 +1,33 @@
+// Assuming dt1 and dt2 are your DataTables and "Column1" is the name of the first column
+// and "Column2" is the name of the second column
+
+DataTable dt1 = ... // your first DataTable
+DataTable dt2 = ... // your second DataTable
+
+// Create a list to store items not present in Column2
+List<string> itemsNotInColumn2 = new List<string>();
+
+// Define a lambda function using Func delegate
+Func<DataRow, string> getColumn1Value = delegate(DataRow row)
+{
+    return row["Column1"].ToString();
+};
+
+// Iterate through rows in dt1
+foreach (DataRow row in dt1.Rows)
+{
+    string valueInColumn1 = getColumn1Value(row);
+
+    // Check if the value in Column1 is not present in Column2
+    if (!dt2.AsEnumerable().Any(delegate(DataRow r) { return r["Column2"].ToString() == valueInColumn1; }))
+    {
+        itemsNotInColumn2.Add(valueInColumn1);
+    }
+}
+
+foreach (var item in itemsNotInColumn2)
+{
+    // Do something with the items not present in Column2
+    // For example, you can print them or perform some other operations
+    Console.WriteLine(item);
+}
