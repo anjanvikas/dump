@@ -1,0 +1,17 @@
+Dim xlApp As Microsoft.Office.Interop. Excel.Application
+
+Dim x/Workbook As Microsoft.Office.Interop.Excel.Workbook
+
+Dim xIorksheet As Microsoft.Office.Interop.Excel.Worksheet
+
+xIApp= New Microsoft. Office.Interop.Excel.ApplicationClass
+Try
+x|Workbook = xIApp.Workbooks.Open(in_FilePath)
+xWorksheet = Type(xWorkbook. Worksheets (in SheetName),Microsoft. Office.Interop.Excel.Worksheet)
+IWorksheet.Visible = Microsoft. Office.Interop.Excel.XISheetVisibilityx|SheetHidden
+xIApp.Visible = False
+x/Workbook Save x|Workbook.Close
+Catch ex As Exception
+Throw ex
+Finally xIApp.Quit
+End
