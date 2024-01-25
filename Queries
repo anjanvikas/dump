@@ -1,0 +1,5 @@
+    1. Whether should we automate the subprocess of filling the metadata like trims id for newly added devices or not. Or should we fill records that can be filled using same excel filtering.
+    2. For count validation of 3p owned devices, we owned devices reports manually we are verifying using the screenshot. To automate extracting count from an image seems to be out of UIPath but we activly seemed help of our RPA engineering team but non of helped so is it okay if count validation is left as manual process.
+    3. Can you Explain the timeline of uploading and deadline for sprint report generation.
+    4. Is this final input share point link ?
+    5. Please provide us the output sharepoint link.
