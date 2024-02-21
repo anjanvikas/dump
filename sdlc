@@ -1,0 +1,43 @@
+Work Effort description
+
+The TPNCI team maintains an active inventory of metadata for devices connecting Wells Fargo with external partners. This inventory includes all dedicated and persistent network connections facilitating communication between us and these external parties. The primary business need is to swiftly disconnect from third parties in the event of a cyber attack. To achieve this, we generate reports to maintain accurate information about these connections.
+
+The Extranet inventory comprises details on how Wells Fargo is linked to third parties, sourced from TPNCI and ServiceNow. The process involves receiving Excel reports from TPNCI and ServiceNow, including the TPNCI active inventory. The team downloads these reports along with the previous month's inventory files.
+
+They then update the previous month's inventory file by transferring records to the appropriate section and adding new device data from the we owned extranet report. They remove previous month's TPNCI records, replacing them with new data from the TPNCI report. Excel manipulations such as VLOOKUP, find & replace, and copy-paste are performed to generate the final report. The completed report is uploaded to a SharePoint channel.
+This process is repeated for the third-party extranet inventory. This summary file is created for per month.
+
+Business Requirements
+Business
+Log into the sharepoint and if not able to log in then send exception email to support team and business teams shared mailbox and end the process.
+Check if your able to access sharepoint folder and if not able to access then send exception email to support team and business teams shared mailbox and end the process.
+Check all the required input files are available in shrepoint folder and if no then send exception email to support team and business teams shared mailbox and end the process.
+Download files and move it to input folder and if any system exception occurred then send exception email to support team and business teams shared mailbox and end the process.
+Check the required headers and tabs in input files and if any exception, then move the input files to exception folder and send exception email to support team and business teams shared mailbox and end the process.
+Generate 3p owned extranet report by adding the 3p owned devices,tpnci data to template and perform vlookup to fill up the metadata and find the number of newly added devices and removed devices. If any exception, then move the input files to exception folder and send exception email to support team and business teams shared mailbox and end the process.
+Upload the generated report to sharepoint output folder. If any exception, then move the input files to exception folder and send exception email to support team and business teams shared mailbox and end the process.
+Move input files to processed and generated inventory report to output folder and check for any new devices. If yes, send new devices information email to business team’s shared mailbox and send the success information. If no, send only success email to business team’s shared mailbox and end the process.
+Process Details : same as work effort description
+The TPNCI team maintains an active inventory of metadata for devices connecting Wells Fargo with external partners. This inventory includes all dedicated and persistent network connections facilitating communication between us and these external parties. The primary business need is to swiftly disconnect from third parties in the event of a cyber attack. To achieve this, we generate reports to maintain accurate information about these connections.
+
+The Extranet inventory comprises details on how Wells Fargo is linked to third parties, sourced from TPNCI and ServiceNow. The process involves receiving Excel reports from TPNCI and ServiceNow, including the TPNCI active inventory. The team downloads these reports along with the previous month's inventory files.
+
+They then update the previous month's inventory file by transferring records to the appropriate section and adding new device data from the we owned extranet report. They remove previous month's TPNCI records, replacing them with new data from the TPNCI report. Excel manipulations such as VLOOKUP, find & replace, and copy-paste are performed to generate the final report. The completed report is uploaded to a SharePoint channel.
+This process is repeated for the third-party extranet inventory. This summary file is created for per month.
+
+Resourcing
+Controls
+Identification
+Data preservation
+Regulatory & compliance
+
+Business Requirements Attachments
+Constraints
+Solution Overview
+Bot downloads the 3p owned devices , 3p with adapter, 3p Owned Extranet Inventory, TPNCI NPIC Active inventory from sharepoint. Checks the header and tab name validations. Populate previous tab by copy-pasting info from 3p Owned extranet inventory tab of inventory file. Populate the Inventory tab of template file by extracting info from 3p Owned devices report. Populate the column b with column A values but remove all ”-” symbols. Populate the compare tab with column B of inventory tab to column A of compare tab and column B of previous tab into column B of compare tab. Find the newly added devices and removed devices by comparing column A and Column B and populate the number in compare tab. Update the current and previous months in compare tab. Populate the SN Adapter tab by copying info from 3P with adapter. Populate the metadata by performing vlookup on previous tab, SN adapter tab, tpnci inventory tab. Save the report and upload the generated report to sharepoint. If any devices added then send the information email to business team’s shared mailbox. Send the success email to business team’s shared mailbox.
+
+
+
+
+
+
