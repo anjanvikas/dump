@@ -1,0 +1,11 @@
+Here are the corrected statements for each module:
+
+1. Problem statement: Given an audio, we need to prepare a model to clearly distinguish whether it's an AI-generated voice or a human voice and provide a confidence score. Additionally, we aim to analyze the audio's emotion, language, accent, and determine if speech is present.
+
+2. We divide the solution into 5 modules:
+    1. Speech detection: Determines whether speech is present in the audio. Solution: Convert audio to text, and if text is generated, then we confirm the presence of speech. Model used: Google Speech-to-Text.
+    2. If no speech is detected, the pipeline ends.
+    3. If speech is detected, the model classifies the audio into AI-generated or human voice using a dataset we prepared and trained. Model name: MIT/ast-finetuned-audioset-10-10-0.4593. This is a fine-tuned model trained on our dataset with custom output labels.
+    4. Next, the model identifies the emotions in the audio using a model from Hugging Face. Model name: Speech Emotion Recognition By Fine-Tuning Wav2Vec 2.0.
+    5. The model also determines the language spoken in the audio using a model from Hugging Face. Model name: Language Identification from Speech Recordings with ECAPA embeddings on CommonLanguage.
+    6. The pipeline will soon include classifying the audio into different accents, which is currently under implementation.
